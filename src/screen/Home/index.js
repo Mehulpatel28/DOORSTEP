@@ -24,7 +24,7 @@ class Home extends Component {
           style={{
             height: 50,
             width: 150,
-            backgroundColor: '#000',
+            backgroundColor: '#410f58',
             borderRadius: 25,
             marginTop: 12,
             alignSelf: 'center',
