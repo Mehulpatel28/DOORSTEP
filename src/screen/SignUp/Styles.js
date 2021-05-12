@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import {Color} from '../../utils/Color'
 
 const styles = StyleSheet.create({
     img: {
@@ -11,14 +12,14 @@ const styles = StyleSheet.create({
       height: 50,
       marginLeft: 20,
       width: 230,
-      backgroundColor: '#373534',
+      backgroundColor: Color.PRIMARY,
       borderRadius: 25,
       alignSelf: 'center',
     },
     txt: {
       justifyContent: 'center',
       alignSelf: 'center',
-      color: 'white',
+      color:  Color.WHITE,
       fontSize: 25,
       fontWeight: 'bold',
       marginTop: 5,
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
       alignSelf: 'center',
       fontSize: 17,
       marginTop: 35,
-      color: '#fff'
+      color: Color.WHITE
     }
   });
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import * as Animatable from 'react-native-animatable';
+import {Color} from '../../utils/Color'
 import {
   View,
   Image,
@@ -182,7 +183,7 @@ class SignUp extends Component {
                       onPress={() => this.props.navigation.navigate('Login')}>
                       <Text style={styles.txt1}>
                         Already have an account?{' '}
-                        <Text style={{fontWeight: 'bold', color: '#fff'}}>
+                        <Text style={{fontWeight: 'bold', color: Color.WHITE}}>
                           Login
                         </Text>
                       </Text>

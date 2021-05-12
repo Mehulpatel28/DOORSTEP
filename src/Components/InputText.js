@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {Color} from '../utils/Color'
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const InputText = (props) => {
@@ -9,7 +10,6 @@ const InputText = (props) => {
       
         <Icon 
         name={props.iconname}   
-        color="#000" 
         style={styles.iconStyle} 
         />
         <TextInput 
@@ -29,7 +29,7 @@ const InputText = (props) => {
     width: 400,
     paddingLeft: 50,
     justifyContent: 'space-between',
-    borderColor: 'gray',
+    borderColor:Color.PRIMARY,
     marginTop: 9 ,
     marginBottom:5,
     marginLeft: 5,
@@ -41,12 +41,13 @@ const InputText = (props) => {
     width: 340,
     borderRadius : 20,
     marginLeft:40,
-    backgroundColor :'#fff',
+    backgroundColor :Color.WHITE,
   },
   iconStyle:{ 
     position: 'absolute',
     left: 10,
     top: 10,
+    color:  Color.BLACK,
     fontSize:32,
     fontWeight: 'bold'
 },
