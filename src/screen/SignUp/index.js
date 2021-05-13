@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as Animatable from 'react-native-animatable';
-import {Color} from '../../utils/Color'
+import {Color} from '../../utils/Color';
+import {Label} from '../../component';
 import {
   View,
   Image,
@@ -12,7 +13,7 @@ import {
   ImageBackground,
   AsyncStorage,
 } from 'react-native';
-import InputText from '../../Components/InputText';
+import InputText from '../../component/ui/inputText';
 import styles from './Styles';
 import Routes from '../../router/routes';
 import {validation, PasswordValidate} from '../../utils/ValidationUtils';
@@ -91,6 +92,7 @@ class SignUp extends Component {
       };
       AsyncStorage.setItem('register_data', JSON.stringify(obj));
       console.log(obj);
+      alert("SuccessFully Registered")
       this.props.navigation.navigate(Routes.Login);
     }
   };
@@ -120,7 +122,9 @@ class SignUp extends Component {
                       onChangeText={text => this.setState({firstname: text})}
                       value={this.state.firstname}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.firstnamerror}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.firstnamerror}
+                    </Label>
 
                     <InputText
                       placeholder="Last Name"
@@ -128,7 +132,9 @@ class SignUp extends Component {
                       onChangeText={text => this.setState({lastname: text})}
                       value={this.state.lastname}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.lastnamerror}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.lastnamerror}
+                    </Label>
 
                     <InputText
                       placeholder="Email"
@@ -137,7 +143,9 @@ class SignUp extends Component {
                       value={this.state.email}
                       error={this.state.emailError}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.emailError}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.emailError}
+                    </Label>
 
                     <InputText
                       maxLength={10}
@@ -147,7 +155,9 @@ class SignUp extends Component {
                       value={this.state.phoneNo}
                       error={this.state.phoneErrorValidation}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.phoneErrorValidation}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.phoneErrorValidation}
+                    </Label>
 
                     <InputText
                       placeholder="Password"
@@ -158,7 +168,9 @@ class SignUp extends Component {
                       value={this.state.password}
                       error={this.state.PasswordError}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.PasswordError}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.PasswordError}
+                    </Label>
 
                     <InputText
                       placeholder="Confirm Password"
@@ -171,22 +183,24 @@ class SignUp extends Component {
                       }
                       error={this.state.ConPassword}
                     />
-                    <Text style={{alignSelf: 'center'}}>{this.state.confirmpasswordError}</Text>
+                    <Label color={Color.ERROR} align='center' normal>
+                      {this.state.confirmpasswordError}
+                    </Label>
 
                     <TouchableOpacity
                       style={styles.btn1}
                       onPress={this.check_validate}>
-                      <Text style={styles.txt}>Sign Up</Text>
+                      <Label color={Color.WHITE} ms={65} mt={3} xxxlarge bolder>Sign Up</Label>
                     </TouchableOpacity>
 
                     <TouchableOpacity
                       onPress={() => this.props.navigation.navigate('Login')}>
-                      <Text style={styles.txt1}>
+                      <Label color={Color.WHITE} mt={30} ms={65} xlarge>
                         Already have an account?{' '}
-                        <Text style={{fontWeight: 'bold', color: Color.WHITE}}>
+                        <Label color={Color.WHITE} bolder xlarge>
                           Login
-                        </Text>
-                      </Text>
+                        </Label>
+                      </Label>
                     </TouchableOpacity>
                   </View>
                 </View>
@@ -198,5 +212,5 @@ class SignUp extends Component {
     );
   }
 }
- 
-export default SignUp
+
+export default SignUp;

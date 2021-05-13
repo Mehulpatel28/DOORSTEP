@@ -19,21 +19,21 @@ const styles = StyleSheet.create({
         backgroundColor: Color.PRIMARY,
         borderRadius: 25,
         alignSelf: 'center',
-    },
-    txt: {
-        justifyContent: 'center',
-        alignSelf: 'center',
-        color: Color.WHITE,
-        fontSize: 25,
-        fontWeight: 'bold',
-        marginTop: 5,
-    },
-    txt1: {
-        justifyContent: 'center',
-        alignSelf: 'center',
-        marginTop: 50,
-        fontSize: 17,
-        color: Color.WHITE
     }
+    // txt: {
+    //     justifyContent: 'center',
+    //     alignSelf: 'center',
+    //     color: Color.WHITE,
+    //     fontSize: 25,
+    //     fontWeight: 'bold',
+    //     marginTop: 5,
+    // },
+    // txt1: {
+    //     justifyContent: 'center',
+    //     alignSelf: 'center',
+    //     marginTop: 50,
+    //     fontSize: 17,
+    //     color: Color.WHITE
+    // }
 })
 export default styles;

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignUp from '../screen/SignUp/index';
-import Auth from '../Authentication/Auth';
 import Login from '../screen/Login/index';
 import Routes from './routes'
+import Auth from './Auth';
 
 const Stack = createStackNavigator();
 

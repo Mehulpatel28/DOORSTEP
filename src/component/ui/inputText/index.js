@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, TextInput, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import {Color} from '../utils/Color'
+import {Color} from '../../../utils/Color'
 // import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const InputText = (props) => {
@@ -37,7 +37,7 @@ const InputText = (props) => {
   },
   main: {
     flexDirection: 'row',
-    margin:10 ,
+    margin:7,
     width: 340,
     borderRadius : 20,
     marginLeft:40,

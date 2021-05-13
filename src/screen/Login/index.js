@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as Animatable from 'react-native-animatable';
-import {Color} from '../../utils/Color'
+import {Color} from '../../utils/Color';
+import {Label} from '../../component';
 
 import {
   View,
@@ -11,7 +12,7 @@ import {
   KeyboardAvoidingView,
   ImageBackground,
 } from 'react-native';
-import InputText from '../../Components/InputText';
+import InputText from '../../component/ui/inputText';
 import styles from './Styles';
 import Routes from '../../router/routes';
 import {validation} from '../../utils/ValidationUtils';
@@ -87,9 +88,9 @@ class Login extends Component {
                     onChangeText={text => this.setState({email: text})}
                     value={this.state.email}
                   />
-                  <Text style={{alignSelf: 'center'}}>
+                  <Label color={Color.ERROR} align='center' normal>
                     {this.state.emailError}
-                  </Text>
+                  </Label>
 
                   <InputText
                     placeholder="Password"
@@ -99,23 +100,25 @@ class Login extends Component {
                     onChangeText={text => this.setState({password: text})}
                     // value={this.state.password}
                   />
-                  <Text style={{alignSelf: 'center'}}>{this.state.PasswordError}</Text>
+                  <Label color={Color.ERROR} align='center' normal>
+                    {this.state.PasswordError}
+                  </Label>
                 </View>
 
                 <TouchableOpacity
                   style={styles.btn1}
                   onPress={this.making_api_call}>
-                  <Text style={styles.txt}>Login</Text>
+                  <Label color={Color.WHITE} ms={75} mt={3} xxxlarge bolder>Login</Label>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                   onPress={() => this.props.navigation.navigate(Routes.SignUp)}>
-                  <Text style={styles.txt1}>
+                  <Label color={Color.WHITE} mt={40} ms={50} xlarge>
                     Not Registered?{' '}
-                    <Text style={{fontWeight: 'bold', color:Color.WHITE}}>
+                    <Label color={Color.WHITE} bolder xlarge>
                       Create an account
-                    </Text>
-                  </Text>
+                    </Label>
+                  </Label>
                 </TouchableOpacity>
               </View>
             </Animatable.View>
