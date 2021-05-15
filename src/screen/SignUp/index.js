@@ -13,7 +13,7 @@ import {
   ImageBackground,
   AsyncStorage,
 } from 'react-native';
-import InputText from '../../component/ui/inputText';
+import InputText from '../../component/ui/InputText';
 import styles from './Styles';
 import Routes from '../../router/routes';
 import {validation, PasswordValidate} from '../../utils/ValidationUtils';

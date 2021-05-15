@@ -9,10 +9,11 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Text,
+  ScrollView,
   KeyboardAvoidingView,
   ImageBackground,
 } from 'react-native';
-import InputText from '../../component/ui/inputText';
+import InputText from '../../component/ui/InputText';
 import styles from './Styles';
 import Routes from '../../router/routes';
 import {validation} from '../../utils/ValidationUtils';
@@ -65,6 +66,7 @@ class Login extends Component {
 
   render() {
     return (
+      <ScrollView>
       <SafeAreaView>
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -120,11 +122,17 @@ class Login extends Component {
                     </Label>
                   </Label>
                 </TouchableOpacity>
+                <TouchableOpacity>
+                  <Label color={Color.WHITE} mt={40} ms={80} xlarge bolder>
+                    Forgot Password?
+                  </Label>
+                </TouchableOpacity>
               </View>
             </Animatable.View>
           </ImageBackground>
         </KeyboardAvoidingView>
       </SafeAreaView>
+      </ScrollView>
     );
   }
 }
