@@ -5,7 +5,8 @@ const Routes = {
     Login: "Login",
     SignUp: "SignUp",
     Home: "Home",
-    Auth: 'Auth'
+    Auth: 'Auth',
+    Boarding: "Boarding"
 
 };
 export default Routes;

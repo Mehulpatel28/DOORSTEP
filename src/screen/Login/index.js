@@ -74,13 +74,13 @@ class Login extends Component {
           enabled={Platform.OS === 'ios' ? true : false}
           style={styles.container}>
           <ImageBackground
-            source={require('../../assets/bgp12.jpg')}
+            source={require('../../assets/images/bgp12.jpg')}
             style={{height: 1000, marginTop: -100}}>
             <Animatable.View animation="fadeInUp" iterationDelay={500}>
               <View style={styles.container}>
                 <Image
                   style={styles.img}
-                  source={require('../../assets/blogin.png')}
+                  source={require('../../assets/images/blogin.png')}
                 />
 
                 <View>

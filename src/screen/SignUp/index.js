@@ -107,13 +107,13 @@ class SignUp extends Component {
             enabled={Platform.OS === 'ios' ? true : false}
             style={{flex: 1}}>
             <ImageBackground
-              source={require('../../assets/bgp12.jpg')}
+              source={require('../../assets/images/bgp12.jpg')}
               style={{height: 1000}}>
               <Animatable.View animation="fadeInUp" iterationDelay={500}>
                 <View style={styles.container}>
                   <Image
                     style={styles.img}
-                    source={require('../../assets/signup1..jpg')}
+                    source={require('../../assets/images/signup1..jpg')}
                   />
                   <View>
                     <InputText

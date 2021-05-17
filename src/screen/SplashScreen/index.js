@@ -50,7 +50,7 @@ class SplashScreen extends Component {
     return (
       <View>
         <Image
-          source={require('../../../src/assets/splashScreen.gif')}
+          source={require('../../../src/assets/images/splashScreen.gif')}
           style={{height: 500, width: '100%',marginTop:100}}
         />
       </View>
